@@ -1,11 +1,11 @@
 <?php
 //Captura o modelo selecionado
-$modelo = $_POST[`modelo`];
+$modelo = $_POST['modelo'];
 
 //Verifica se o cliente selecionou uma foto no formulário ou deixou em branco
-if($_FILES[`foto`][`size`] > 0){
+if($_FILES['foto']['size'] > 0){
 //Obtém o tipo da imagem enviada
-    $tipo = pathinfo($_FILES[`foto`][`tmp_name`], PATHINFO_EXTENSION);
+    $tipo = pathinfo($_FILES['foto']['tmp_name'], PATHINFO_EXTENSION);
     
 //Gera a imagem em base64 para poder colocar na tag <img> do curriculo
     $foto = 'data:img/' .$tipo . ';base64' .base64_encode($conteudo);
