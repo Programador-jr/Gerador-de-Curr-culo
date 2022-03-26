@@ -8,10 +8,10 @@ if($_FILES['foto']['size'] > 0){
     $tipo = pathinfo($_FILES['foto']['tmp_name'], PATHINFO_EXTENSION);
     
 //Gera a imagem em base64 para poder colocar na tag <img> do curriculo
-    $foto = 'data:img/' .$tipo . ';base64' .base64_encode($conteudo);
+    $foto = 'data:image/' . $tipo . ';base64,' . base64_encode($conteudo);
 } else{
     //Se o cliente não selecionou uma foto, usamos a imagem padrão 
-    $foto = "img/avatar-1.png";
+    $foto = "image/background.png";
 }
 
 //Gera um array com os dados a serem enviados para impressão no currículo
@@ -24,11 +24,13 @@ $dados = array(
     'telefone' => $_POST['telefone'],
     'email' => $_POST['email'],
     'resumo' => $_POST['resumo'],
+		'site' => $_POST['site'],
     'formacoes' => isset($_POST['formacao-curso']) ?
         
         array(
             'cursos' => $_POST['formacao-curso'],
             'instituicoes' => $_POST['formacao-instituicao'],
+						'inicios' => $_POST['formacao-inicio'],
             'conclusoes' => $_POST['formacao-conclusao'],
         ) : null, //Se o usuário não adicionou nenhuma formação, esse elemento ficará nulo
     'experiencias' => isset($_POST['experiencia-cargo']) ?

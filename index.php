@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gerador de Currículo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -18,7 +19,7 @@
 
                     <div class="form-group">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome">
+                        <input type="text" class="form-control" name="nome" id="nome" required>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -36,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label for="endereco" class="form-label">Endereço</label>
-                        <input type="text" class="form-control" name="endereco" id="endereco">
+                        <input type="text" class="form-control" name="endereco" id="endereco" required>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -50,7 +51,13 @@
                                 <label for="email" class="form-label">E-mail</label>
                                 <input type="email" class="form-control" name="email" id="email" required>
                             </div>
-                        </div> 
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="site" class="form-label">Site</label>
+                                <input type="url" class="form-control" name="site" id="site">
+                            </div>
+                        </div> 											
                     </div>
                     <div class="form-group">
                         <label for="resumo" class="form-label">Resumo</label>
