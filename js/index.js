@@ -8,16 +8,19 @@ $(function () {
         var linha = '<div class="card">' +
             '    <div class="card-body">' +
             '        <div class="row">' +
-            '            <div class="col-12 col-md-5">' +
+            '            <div class="col-12 col-md-4">' +
             '                <input type="text" class="form-control" placeholder="Curso" name="formacao-curso[]">' +
             '            </div>' +
-            '            <div class="col-12 col-md-5">' +
+            '            <div class="col-12 col-md-3">' +
             '                <input type="text" class="form-control" placeholder="Instituição" name="formacao-instituicao[]">' +
             '            </div>' +
-            '            <div class="col-12 col-md">' +
+            '            <div class="col-6 col-md-2">' +
+            '                <input type="text" class="form-control" placeholder="Inicio" name="formacao-inicio[]">' +
+            '            </div>' +					
+            '            <div class="col-6 col-md-2">' +
             '                <input type="text" class="form-control" placeholder="Conclusão" name="formacao-conclusao[]">' +
             '            </div>' +
-            '            <div class="col-12 col-md">' +
+            '            <div class="col col-md">' +
             '                <button type="button" class="btn btn-danger form-control btn-remover-item" title="Remover formação">&times;</button>' +
             '            </div>' +
             '        </div>' +
